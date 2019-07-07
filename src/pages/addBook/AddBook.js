@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Button, ScrollView } from 'react-native'
+import { Text, View, Button, ScrollView, ToastAndroid } from 'react-native'
 import InputCard from '../../uiComponents/inputCard/InputCard';
 
 class AddBook extends Component {
@@ -26,13 +26,13 @@ class AddBook extends Component {
    onSubmit = () => {
       const book = { ...this.state, id: Math.random() }
       this.props.navigation.state.params.func(book)
+      this.props.navigation.goBack()
    }
 
    render() {
       // console.log('add book', this.props.navigation.state.params.func)
       return (
          <View>
-            <Text>Add New Book</Text>
             <ScrollView>
                <View>
                   <InputCard

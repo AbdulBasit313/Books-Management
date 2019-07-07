@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableOpacity, FlatList, Button } from 'react-native'
+import { Text, View, TouchableOpacity, FlatList, Button, ScrollView } from 'react-native'
+import DashboardStyle from './DashboardStyle';
 
 class Dashboard extends Component {
    constructor(props) {
@@ -32,31 +33,34 @@ class Dashboard extends Component {
 
    renderItem = ({ item }) => {
       return (
-         <TouchableOpacity onPress={() => this.props.navigation.navigate('BookDetails')}>
-            <Text>{item.title}</Text>
-            <Text>{item.author}</Text>
+         <TouchableOpacity style={DashboardStyle.flatlistItemContainer} onPress={() => this.props.navigation.navigate('BookDetails')}>
+            <Text style={DashboardStyle.flatBookText}>{item.title}</Text>
+            <Text style={DashboardStyle.flatAuthorText}>{item.author}</Text>
          </TouchableOpacity>
       )
    }
 
    render() {
       // console.log('state', this.state)
+      const { navigate } = this.props.navigation
       return (
-         <View>
-            <Text>Your Dashboard</Text>
-            <FlatList
-               data={this.state.books}
-               keyExtractor={this.keyExtractor}
-               renderItem={this.renderItem}
-            />
-            <Button
-               onPress={() => this.props.navigation.navigate('AddBook', {
-                  func: this.onSaveBook
-               })}
-               title="New Book"
-               color="green"
-            />
-         </View>
+         <ScrollView>
+            <View style={DashboardStyle.dashboardContainer}>
+               <FlatList
+                  data={this.state.books}
+                  keyExtractor={this.keyExtractor}
+                  renderItem={this.renderItem}
+               />
+               <Button
+                  onPress={() => navigate('AddBook', {
+                     func: this.onSaveBook
+                  })}
+                  title="New Book"
+                  color="green"
+                  style={{ position: 'absolute', bottom: 10, zIndex: 1 }}
+               />
+            </View>
+         </ScrollView>
       )
    }
 }
