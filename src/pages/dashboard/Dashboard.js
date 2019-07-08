@@ -4,6 +4,7 @@ import DashboardStyle from './DashboardStyle';
 import data from '../../data/data.json'
 import AddButton from '../../uiComponents/addButton/AddButton';
 
+
 class Dashboard extends Component {
    constructor(props) {
       super(props)

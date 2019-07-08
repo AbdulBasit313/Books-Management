@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Text, View } from 'react-native'
+
 
 const BookDetails = (props) => {
    // console.log('details', this.props.navigation.state.params.lib)
