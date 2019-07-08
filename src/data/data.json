@@ -1,0 +1,98 @@
+[
+   {
+      "id": 1,
+      "title": "40 Rules of love",
+      "author": "Elif Shafak",
+      "date": "24-04-19",
+      "publisher": "penguin",
+      "genre": "Literary fiction"
+   },
+   {
+      "id": 2,
+      "title": "The 5 am club",
+      "author": "Robin Sharma",
+      "date": "11-06-19",
+      "publisher": " HarperCollins",
+      "genre": "Self-help"
+   },
+   {
+      "id": 3,
+      "title": "The 5  Love Languages",
+      "author": "Gary Chapman",
+      "date": "04-04-18",
+      "publisher": "Northfield Publishing",
+      "genre": "Self-help"
+   },
+   {
+      "id": 4,
+      "title": "Attitude is everything",
+      "author": "Jeff Keller",
+      "date": "17-01-17",
+      "publisher": " Incorporated",
+      "genre": "Self-help"
+   },
+   {
+      "id": 5,
+      "title": "40 Rules of love",
+      "author": "Elif Shafak",
+      "date": "24-04-19",
+      "publisher": "penguin",
+      "genre": "Literary fiction"
+   },
+   {
+      "id": 6,
+      "title": "The 5 am club",
+      "author": "Robin Sharma",
+      "date": "11-06-19",
+      "publisher": " HarperCollins",
+      "genre": "Self-help"
+   },
+   {
+      "id": 7,
+      "title": "The 5  Love Languages",
+      "author": "Gary Chapman",
+      "date": "04-04-18",
+      "publisher": "Northfield Publishing",
+      "genre": "Self-help"
+   },
+   {
+      "id": 8,
+      "title": "Attitude is everything",
+      "author": "Jeff Keller",
+      "date": "17-01-17",
+      "publisher": " Incorporated",
+      "genre": "Self-help"
+   },
+   {
+      "id": 9,
+      "title": "40 Rules of love",
+      "author": "Elif Shafak",
+      "date": "24-04-19",
+      "publisher": "penguin",
+      "genre": "Literary fiction"
+   },
+   {
+      "id": 10,
+      "title": "The 5 am club",
+      "author": "Robin Sharma",
+      "date": "11-06-19",
+      "publisher": " HarperCollins",
+      "genre": "Self-help"
+   },
+   {
+      "id": 11,
+      "title": "The 5  Love Languages",
+      "author": "Gary Chapman",
+      "date": "04-04-18",
+      "publisher": "Northfield Publishing",
+      "genre": "Self-help"
+   },
+   {
+      "id": 12,
+      "title": "Attitude is everything",
+      "author": "Jeff Keller",
+      "date": "17-01-17",
+      "publisher": " Incorporated",
+      "genre": "Self-help"
+   }
+]

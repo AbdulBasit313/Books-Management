@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import React from 'react'
+import { Text, View, TouchableOpacity } from 'react-native'
+import Icon from 'react-native-vector-icons/AntDesign'
 
-export default class AddButton extends Component {
-   render() {
-      return (
-         <View>
-            <Text> textInComponent </Text>
-         </View>
-      )
-   }
+
+const AddButton = ({ onPress, style }) => {
+   return (
+      <TouchableOpacity onPress={onPress} activeOpacity={0.6} style={style}>
+         <Icon
+            name="pluscircle" size={52} color="#0078D7"
+         />
+      </TouchableOpacity>
+   )
 }
+
+
+export default AddButton

@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native'
 
 export default DashboardStyle = StyleSheet.create({
    dashboardContainer: {
-      // position: 'relative',
-      // backgroundColor: '#eceff1'
+      flex: 1,
+      position: 'relative',
    },
    flatlistItemContainer: {
       backgroundColor: '#fff',

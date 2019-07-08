@@ -1,32 +1,58 @@
 import React, { Component } from 'react'
-import { Text, View, Button, ScrollView, ToastAndroid } from 'react-native'
+import { Text, View, Button, ScrollView, TouchableOpacity } from 'react-native'
 import InputCard from '../../uiComponents/inputCard/InputCard';
+import DateTimePicker from "react-native-modal-datetime-picker"
+import DateCard from '../../uiComponents/dateCard/DateCard';
+
 
 class AddBook extends Component {
    constructor(props) {
       super(props)
       this.state = {
          title: '',
-         author: ''
+         author: '',
+         date: null,
+         publisher: '',
+         genre: '',
+         isDateTimePickerVisible: false
       }
    }
 
-   onChangeBookName(text) {
-      this.setState({
-         title: text
-      })
+   showDateTimePicker = () => {
+      this.setState({ isDateTimePickerVisible: true });
    }
 
-   onChangeAuthorName(text) {
-      this.setState({
-         author: text
-      })
+   hideDateTimePicker = () => {
+      this.setState({ isDateTimePickerVisible: false });
+   }
+
+   handleDatePicked = date => {
+      console.log("A date has been picked: ", date);
+      this.setState({ date: date.toString() })
+      this.hideDateTimePicker();
+   }
+
+   onChangeBook(text) {
+      this.setState({ title: text })
+   }
+
+   onChangeAuthor(text) {
+      this.setState({ author: text })
+   }
+
+   onChangePublisher(text) {
+      this.setState({ publisher: text })
+   }
+
+   onChangeGenre(text) {
+      this.setState({ genre: text })
    }
 
    onSubmit = () => {
       const book = { ...this.state, id: Math.random() }
       this.props.navigation.state.params.func(book)
       this.props.navigation.goBack()
+      alert('Added Book')
    }
 
    render() {
@@ -36,16 +62,43 @@ class AddBook extends Component {
             <ScrollView>
                <View>
                   <InputCard
-                     filedName='Title'
+                     fieldName='Title'
                      placeholder='title'
-                     onChangeText={(text) => this.onChangeBookName(text)}
+                     onChangeText={(text) => this.onChangeBook(text)}
                   />
                </View>
                <View>
                   <InputCard
-                     filedName='Author'
+                     fieldName='Author'
                      placeholder='author'
-                     onChangeText={(text) => this.onChangeAuthorName(text)}
+                     onChangeText={(text) => this.onChangeAuthor(text)}
+                  />
+               </View>
+               <View>
+                  <DateCard
+                     fieldName='Purchase Date'
+                     placeholder='date'
+                     date={this.state.date}
+                     onPress={this.showDateTimePicker}
+                  />
+                  <DateTimePicker
+                     isVisible={this.state.isDateTimePickerVisible}
+                     onConfirm={this.handleDatePicked}
+                     onCancel={this.hideDateTimePicker}
+                  />
+               </View>
+               <View>
+                  <InputCard
+                     fieldName='Publisher'
+                     placeholder='publisher'
+                     onChangeText={(text) => this.onChangePublisher(text)}
+                  />
+               </View>
+               <View>
+                  <InputCard
+                     fieldName='Genre'
+                     placeholder='genre'
+                     onChangeText={(text) => this.onChangeGenre(text)}
                   />
                </View>
             </ScrollView>

@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Text, View, TextInput } from 'react-native'
 import InputCardStyle from './InputCardStyle';
 
-const InputCard = ({ filedName, onChangeText, placeholder }) => {
+const InputCard = ({ fieldName, onChangeText, placeholder }) => {
    return (
       <View style={InputCardStyle.InputCardContainer}>
-         <Text style={InputCardStyle.cardTitle}>{filedName}</Text>
+         <Text style={InputCardStyle.cardTitle}>{fieldName}</Text>
          <TextInput
             style={InputCardStyle.cardInput}
             onChangeText={onChangeText}
