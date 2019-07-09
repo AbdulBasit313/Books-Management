@@ -29,5 +29,11 @@ export default DashboardStyle = StyleSheet.create({
       padding: 5,
       fontWeight: 'bold',
       color: '#81cfe0'
+   },
+   addButtonStyle: {
+      position: 'absolute',
+      bottom: 15,
+      right: 15,
+      zIndex: 1
    }
 })

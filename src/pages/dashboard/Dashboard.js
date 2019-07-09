@@ -3,14 +3,28 @@ import { Text, View, TouchableOpacity, FlatList, Button, ScrollView } from 'reac
 import DashboardStyle from './DashboardStyle';
 import data from '../../data/data.json'
 import AddButton from '../../uiComponents/addButton/AddButton';
+import Swipeout from 'react-native-swipeout';
 
 
 class Dashboard extends Component {
+   static navigationOptions = {
+      headerTitleStyle: {
+         textAlign: 'center',
+         flex: 1,
+         color: 'white'
+      },
+      headerTitle: 'Dashboard'
+   }
    constructor(props) {
       super(props)
       this.state = {
          books: data
       }
+   }
+
+   deleteItem = (id) => {
+      const del = this.state.books.filter((item, index) => item.id != id)
+      this.setState({ books: del })
    }
 
    onSaveBook = (newBook) => {
@@ -24,13 +38,23 @@ class Dashboard extends Component {
    renderItem = ({ item }) => {
       const { navigate } = this.props.navigation
       return (
-         <TouchableOpacity style={DashboardStyle.flatlistItemContainer}
-            onPress={() => navigate('BookDetails', {
-               lib: item
-            })}>
-            <Text style={DashboardStyle.flatBookText}>{item.title}</Text>
-            <Text style={DashboardStyle.flatAuthorText}>{item.author}</Text>
-         </TouchableOpacity>
+         <Swipeout
+            style={DashboardStyle.flatlistItemContainer}
+            right={[
+               { text: 'Edit', onPress: () => alert('hello') },
+               { text: 'Delete', onPress: () => this.deleteItem(item.id) }
+            ]}
+            backgroundColor='fff'
+         >
+            <TouchableOpacity
+               onPress={() => navigate('BookDetails', {
+                  lib: item
+               })}>
+               <Text style={DashboardStyle.flatBookText}>{item.title}</Text>
+               <Text style={DashboardStyle.flatAuthorText}>{item.author}</Text>
+            </TouchableOpacity >
+         </Swipeout >
+
       )
    }
 
@@ -48,7 +72,7 @@ class Dashboard extends Component {
                onPress={() => navigate('AddBook', {
                   func: this.onSaveBook
                })}
-               style={{ position: 'absolute', bottom: 15, right: 15, zIndex: 1 }}
+               style={DashboardStyle.addButtonStyle}
             />
          </View>
       )
