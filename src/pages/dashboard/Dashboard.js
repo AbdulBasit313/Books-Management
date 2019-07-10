@@ -7,14 +7,6 @@ import Swipeout from 'react-native-swipeout';
 
 
 class Dashboard extends Component {
-   static navigationOptions = {
-      headerTitleStyle: {
-         textAlign: 'center',
-         flex: 1,
-         color: 'white'
-      },
-      headerTitle: 'Dashboard'
-   }
    constructor(props) {
       super(props)
       this.state = {
@@ -47,11 +39,14 @@ class Dashboard extends Component {
             backgroundColor='fff'
          >
             <TouchableOpacity
+               activeOpacity={0.8}
                onPress={() => navigate('BookDetails', {
                   lib: item
                })}>
-               <Text style={DashboardStyle.flatBookText}>{item.title}</Text>
-               <Text style={DashboardStyle.flatAuthorText}>{item.author}</Text>
+               <View style={DashboardStyle.textView}>
+                  <Text style={DashboardStyle.flatBookText}>{item.title}</Text>
+                  <Text style={DashboardStyle.flatAuthorText}>{item.author}</Text>
+               </View>
             </TouchableOpacity >
          </Swipeout >
 

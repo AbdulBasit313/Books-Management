@@ -1,14 +1,21 @@
 class Functions {
 
+   // colors
+   addButton = '#26ABD4'
+   inputBackground = '#F3F5FF'
+
    // Header Styling
    header = {
       headerStyle: {
-         backgroundColor: '#26ABD4'
+         backgroundColor: '#26ABD4',
       },
-      // headertTitleStyle: {
-      //    textAlign: 'center',
-      //    flex: 1
-      // }
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+         flex: 1,
+         textAlign: 'center',
+         fontFamily: 'Literata',
+         fontWeight: '400'
+      }
    }
 }
 

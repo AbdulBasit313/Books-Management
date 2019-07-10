@@ -7,10 +7,10 @@ export default DashboardStyle = StyleSheet.create({
    },
    flatlistItemContainer: {
       backgroundColor: '#fff',
-      shadowOpacity: 0.8,
+      shadowOpacity: 0.4,
       shadowOffset: { width: 10, height: 10 },
       shadowRadius: 2,
-      elevation: 2,
+      elevation: 1,
       shadowColor: 'blue',
       borderLeftWidth: 0,
       borderTopWidth: 0,
@@ -18,17 +18,20 @@ export default DashboardStyle = StyleSheet.create({
       margin: 5,
       borderRadius: 3,
    },
+   textView: {
+      padding: 10,
+   },
    flatBookText: {
-      fontSize: 20,
-      padding: 5,
-      fontWeight: 'bold',
-      color: '#4d4d4d'
+      fontFamily: 'Roboto-Regular',
+      fontSize: 18,
+      // color: '#4d4d4d',
+      color: '#535352',
    },
    flatAuthorText: {
+      fontFamily: 'Literata',
       fontSize: 14,
-      padding: 5,
-      fontWeight: 'bold',
-      color: '#81cfe0'
+      marginTop: 5
+      // color: '#4d4d4d',
    },
    addButtonStyle: {
       position: 'absolute',

@@ -3,6 +3,7 @@ import { Text, View, Button, ScrollView } from 'react-native'
 import InputCard from '../../uiComponents/inputCard/InputCard';
 import DateTimePicker from "react-native-modal-datetime-picker"
 import DateCard from '../../uiComponents/dateCard/DateCard';
+import SubmitButton from '../../uiComponents/submitButton/SubmitButton';
 
 
 class AddBook extends Component {
@@ -44,7 +45,7 @@ class AddBook extends Component {
    render() {
       // console.log('add book', this.props.navigation.state.params.func)
       return (
-         <View>
+         <View style={{ flex: 1, position: 'relative' }}>
             <ScrollView>
                <View>
                   <InputCard
@@ -88,11 +89,7 @@ class AddBook extends Component {
                   />
                </View>
             </ScrollView>
-            <Button
-               onPress={this.onSubmit}
-               title="Submit Book"
-               color="#841584"
-            />
+            <SubmitButton onPress={this.onSubmit} style={{ position: 'absolute', bottom: 0, zIndex: 1 }} />
          </View>
       )
    }
