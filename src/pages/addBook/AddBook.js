@@ -36,10 +36,16 @@ class AddBook extends Component {
    }
 
    onSubmit = () => {
-      const book = { ...this.state, id: Math.random() }
-      this.props.navigation.state.params.func(book)
-      this.props.navigation.goBack()
-      alert('Added Book')
+      let notEmpty = this.state.title.trim().length > 0;
+      if (!notEmpty) {
+         alert('Title can\'t be empty')
+      }
+      else {
+         const book = { ...this.state, id: Math.random() }
+         this.props.navigation.state.params.func(book)
+         this.props.navigation.goBack()
+         alert('Added Book')
+      }
    }
 
    render() {

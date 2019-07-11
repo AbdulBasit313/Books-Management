@@ -4,6 +4,8 @@ import DashboardStyle from './DashboardStyle';
 import data from '../../data/data.json'
 import AddButton from '../../uiComponents/addButton/AddButton';
 import Swipeout from 'react-native-swipeout';
+import Functions from '../../common/Functions';
+import Icon from 'react-native-vector-icons/AntDesign'
 
 
 class Dashboard extends Component {
@@ -33,8 +35,11 @@ class Dashboard extends Component {
          <Swipeout
             style={DashboardStyle.flatlistItemContainer}
             right={[
-               { text: 'Edit', onPress: () => alert('hello') },
-               { text: 'Delete', onPress: () => this.deleteItem(item.id) }
+               {
+                  text: <Icon name="delete" size={30} color='white' />,
+                  onPress: () => this.deleteItem(item.id),
+                  backgroundColor: Functions.removeRed
+               }
             ]}
             backgroundColor='fff'
          >
