@@ -8,7 +8,7 @@ const AddButton = ({ onPress, style }) => {
    return (
       <TouchableOpacity onPress={onPress} activeOpacity={0.8} style={style}>
          <Icon
-            name="pluscircle" size={52} color={Functions.addButton}
+            name="pluscircle" size={52} color={Functions.primaryColor}
          />
       </TouchableOpacity>
    )

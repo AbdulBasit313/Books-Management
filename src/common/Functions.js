@@ -1,9 +1,13 @@
 class Functions {
 
    // colors
-   addButton = '#26ABD4'
+   primaryColor = '#26ABD4'
+   secondaryColor = '#fff'
    inputBackground = '#F3F5FF'
-   removeRed = '#ec644b'
+   darkColor = '#333333'
+   lightColor = '#f4f4f4'
+   dangerColor = '#ff9478'
+   successColor = '#26c281'
 
    // Social Icon Colors
    twitterBlue = '#1DA1F2'
@@ -15,7 +19,7 @@ class Functions {
    // Header Styling
    header = {
       headerStyle: {
-         backgroundColor: '#26ABD4',
+         backgroundColor: this.primaryColor,
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -23,7 +27,10 @@ class Functions {
          textAlign: 'center',
          fontFamily: 'Literata',
          fontWeight: '400'
-      }
+      },
+      headerTitleContainerStyle: {
+         left: 0
+      },
    }
 }
 

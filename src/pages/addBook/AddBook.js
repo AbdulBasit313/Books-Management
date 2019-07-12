@@ -44,7 +44,6 @@ class AddBook extends Component {
          const book = { ...this.state, id: Math.random() }
          this.props.navigation.state.params.func(book)
          this.props.navigation.goBack()
-         alert('Added Book')
       }
    }
 

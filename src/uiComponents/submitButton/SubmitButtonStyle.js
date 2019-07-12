@@ -3,10 +3,10 @@ import Functions from '../../common/Functions';
 
 export default SubmitButtonStyle = StyleSheet.create({
    buttonContainer: {
-      backgroundColor: Functions.addButton
+      backgroundColor: Functions.primaryColor
    },
    buttonStyle: {
-      padding: 13,
+      padding: 11.5,
       color: 'white',
       fontSize: 17,
       justifyContent: 'center',

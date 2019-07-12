@@ -1,6 +1,6 @@
 import { createDrawerNavigator, createAppContainer } from 'react-navigation'
-import About from '../pages/about/About';
-import { DashboardStack } from './stack';
+import { DashboardStack, AboutStack } from './stack';
+import DrawerItems from './drawerItems/DrawerItems';
 
 
 export const Drawer = createDrawerNavigator({
@@ -8,9 +8,12 @@ export const Drawer = createDrawerNavigator({
       screen: DashboardStack
    },
    About: {
-      screen: About
+      screen: AboutStack
    }
-})
+}, {
+      contentComponent: DrawerItems,
+      drawerPosition: 'left'
+   })
 
 
 export const Root = createAppContainer(Drawer)
