@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableOpacity, FlatList, Button, ScrollView } from 'react-native'
+import { Text, View, TouchableOpacity, FlatList, Button, ScrollView, StatusBar } from 'react-native'
 import DashboardStyle from './DashboardStyle';
 import data from '../../data/data.json'
 import AddButton from '../../uiComponents/addButton/AddButton';
@@ -74,6 +74,9 @@ class Dashboard extends Component {
       const { navigate } = this.props.navigation
       return (
          <View style={DashboardStyle.dashboardContainer}>
+            <View>
+               <StatusBar backgroundColor="#22313f" barStyle="light-content" />
+            </View>
             <FlatList
                data={books}
                keyExtractor={this.keyExtractor}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, TouchableOpacity, FlatList } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import DrawerItemsStyle from './DrawerItemsStyle';
 
 
 class DrawerItems extends Component {
@@ -26,15 +27,15 @@ class DrawerItems extends Component {
       const { state } = navigation
       return (
          <TouchableOpacity
-            style={{ flex: 1, flexDirection: "row" }}
+            style={DrawerItemsStyle.drawerItem}
             // key={index}
             onPress={() => this.navigateScreen(item.routeName)}
             activeOpacity={0.6}
          >
             <Icon
-               name={item.icon} size={28}
+               name={item.icon} size={24} color='white'
             />
-            <Text>{item.routeName}</Text>
+            <Text style={DrawerItemsStyle.drawerItemText}>{item.routeName}</Text>
          </TouchableOpacity>
       )
    }
@@ -42,7 +43,7 @@ class DrawerItems extends Component {
    render() {
       const { routes } = this.state
       return (
-         <View>
+         <View style={DrawerItemsStyle.drawerStyle}>
             <FlatList
                data={routes}
                renderItem={this.renderItem.bind(this)}

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
 import ContentCard from '../../uiComponents/contentCard/ContentCard';
 
 
@@ -9,23 +9,30 @@ const BookDetails = (props) => {
    return (
       <Fragment>
          <ContentCard>
-            <Text>Title: {title}</Text>
+            <Text style={BookDetailsStyle.textStyle}>Title: {title}</Text>
          </ContentCard>
          <ContentCard>
-            <Text>Author: {author}</Text>
+            {author ? <Text style={BookDetailsStyle.textStyle}>Author: {author}</Text> : <Text>Author: Author not specified</Text>}
          </ContentCard>
          <ContentCard>
-            <Text>Publisher: {publisher}</Text>
+            {publisher ? <Text style={BookDetailsStyle.textStyle}>Publisher: {publisher}</Text> : <Text>Publisher: Publisher not specified</Text>}
          </ContentCard>
          <ContentCard>
-            <Text>Genre:{genre}</Text>
+            {genre ? <Text style={BookDetailsStyle.textStyle}>Genre: {genre}</Text> : <Text>Genre: Genre not specified</Text>}
          </ContentCard>
          <ContentCard>
-            <Text>Purchasing Date: {date}</Text>
+            {date ? <Text style={BookDetailsStyle.textStyle}>Purchased On: {date}</Text> : <Text>Purchased On: Purchased date not specified</Text>}
          </ContentCard>
       </Fragment>
    )
 }
 
+const BookDetailsStyle = StyleSheet.create({
+   textStyle: {
+      color: '#535352',
+      fontSize: 18,
+      fontFamily: 'Literata Italic'
+   }
+})
 
 export default BookDetails

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Text, View, TouchableOpacity, StyleSheet, Linking } from 'react-native'
 import ContentCard from '../../uiComponents/contentCard/ContentCard';
 import Icon from 'react-native-vector-icons/AntDesign'
@@ -9,10 +9,10 @@ import CustomStyle from '../../common/CustomStyle'
 
 const About = () => {
    return (
-      <Fragment>
+      <View style={{ marginTop: 15 }}>
          <ContentCard>
-            <Text style={[CustomStyle.textAlignCenter, { color: Functions.addButton, fontFamily: 'Roboto-Regular', fontSize: 16 }]}>Follow Me On</Text>
-            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: 20 }}>
+            <Text style={[CustomStyle.textAlignCenter, { color: Functions.twitterBlue, fontFamily: 'Roboto-Regular', fontSize: 16, marginBottom: 10 }]}>Follow Me On</Text>
+            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: 20, marginBottom: 10 }}>
                <TouchableOpacity
                   style={AboutStyle.card}
                   onPress={() => { Linking.openURL('https://twitter.com/Basit_Miyanji') }}
@@ -42,7 +42,7 @@ const About = () => {
          <ContentCard>
             <Text style={[CustomStyle.textAlignCenter, { fontFamily: 'Literata', fontSize: 18, color: '#535352' }]}>Version: 0.5</Text>
          </ContentCard>
-      </Fragment >
+      </View>
    )
 }
 

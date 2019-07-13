@@ -1,8 +1,8 @@
 class Functions {
 
    // colors
-   primaryColor = '#26ABD4'
-   secondaryColor = '#fff'
+   primaryColor = '#26ABD4' // used in header add and submit button
+   secondaryColor = '#30336b' // used in drawer background
    inputBackground = '#F3F5FF'
    darkColor = '#333333'
    lightColor = '#f4f4f4'
