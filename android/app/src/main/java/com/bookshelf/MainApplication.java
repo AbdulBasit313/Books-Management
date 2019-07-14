@@ -1,4 +1,4 @@
-package com.booksmanagement;
+package com.bookshelf;
 
 import android.app.Application;
 

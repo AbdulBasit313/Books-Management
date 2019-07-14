@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>BooksManagement</string>
+	<string>Bookshelf</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -55,6 +55,9 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Literata Italic.ttf</string>
+		<string>Literata.ttf</string>
+		<string>Roboto-Regular.ttf</string>
 		<string>AntDesign.ttf</string>
 		<string>Entypo.ttf</string>
 		<string>EvilIcons.ttf</string>
@@ -71,9 +74,6 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
-		<string>Roboto-Regular.ttf</string>
-		<string>Literata Italic.ttf</string>
-		<string>Literata.ttf</string>
 	</array>
 </dict>
 </plist>
