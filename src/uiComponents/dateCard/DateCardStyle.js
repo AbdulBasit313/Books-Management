@@ -19,5 +19,8 @@ export default DateCardStyle = StyleSheet.create({
    cardInput: {
       fontFamily: 'Roboto-Regular',
       padding: 7
+   },
+   dateTextStyle: {
+      color: 'rgba(0,0,0,0.4)'
    }
 })

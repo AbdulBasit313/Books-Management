@@ -11,7 +11,7 @@ const DateCard = ({ fieldName, onPress, placeholder, date }) => {
             onPress={onPress}
             style={DateCardStyle.cardInput}
          >
-            {date == null ? <Text>{placeholder}</Text> : <Text>{date}</Text>}
+            {date == null ? <Text style={DateCardStyle.dateTextStyle}>{placeholder}</Text> : <Text>{date}</Text>}
          </TouchableOpacity>
       </View>
    )

@@ -26,4 +26,14 @@ export default DrawerItemsStyle = StyleSheet.create({
       fontFamily: 'Literata',
       marginLeft: 7
    },
+   activeDrawerItem: {
+      // backgroundColor: 'red',
+   },
+   activeDrawerItemIcon: {
+      // color: 'blue'
+   },
+   activeDrawerItemText: {
+      // fontSize: 16,
+      // color: 'green'
+   },
 })

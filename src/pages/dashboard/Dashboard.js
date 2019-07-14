@@ -7,6 +7,7 @@ import Swipeout from 'react-native-swipeout';
 import Functions from '../../common/Functions';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import Message from '../../uiComponents/message/Message';
+import EmptyList from '../../uiComponents/emptyList/EmptyList';
 
 
 class Dashboard extends Component {
@@ -81,6 +82,7 @@ class Dashboard extends Component {
                data={books}
                keyExtractor={this.keyExtractor}
                renderItem={this.renderItem}
+               ListEmptyComponent={<EmptyList />}
             />
             <AddButton
                onPress={() => navigate('AddBook', {

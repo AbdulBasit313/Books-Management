@@ -7,7 +7,7 @@ const Message = ({ alert, color }) => {
    return (
       alert !== null && (
          <View style={{ backgroundColor: color, padding: 11 }}>
-            <Text style={[CustomStyle.textAlignCenter, { color: 'white', fontSize: 16 }]}>{alert}</Text>
+            <Text style={[CustomStyle.textAlignCenter, { color: 'white', fontSize: 16, fontFamily: 'RobotoRegular' }]}>{alert}</Text>
          </View>
       )
    )

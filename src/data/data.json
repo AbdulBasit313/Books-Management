@@ -28,43 +28,27 @@
       "title": "Attitude is everything",
       "author": "Jeff Keller",
       "date": "17-01-17",
-      "publisher": " Incorporated",
+      "publisher": "Incorporated",
       "genre": "Self-help"
    },
    {
       "id": 5,
-      "title": "40 Rules of love",
-      "author": "Elif Shafak",
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
       "date": "24-04-19",
-      "publisher": "penguin",
-      "genre": "Literary fiction"
+      "publisher": "Farrar, Straus and Giroux",
+      "genre": "Philosophy"
    },
    {
       "id": 6,
-      "title": "The 5 am club",
-      "author": "Robin Sharma",
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Stephen R. Covey",
       "date": "11-06-19",
-      "publisher": " HarperCollins",
+      "publisher": "Free Press",
       "genre": "Self-help"
    },
    {
       "id": 7,
-      "title": "The 5  Love Languages",
-      "author": "Gary Chapman",
-      "date": "04-04-18",
-      "publisher": "Northfield Publishing",
-      "genre": "Self-help"
-   },
-   {
-      "id": 8,
-      "title": "Attitude is everything",
-      "author": "Jeff Keller",
-      "date": "17-01-17",
-      "publisher": " Incorporated",
-      "genre": "Self-help"
-   },
-   {
-      "id": 9,
       "title": "40 Rules of love",
       "author": "Elif Shafak",
       "date": "24-04-19",
@@ -72,7 +56,7 @@
       "genre": "Literary fiction"
    },
    {
-      "id": 10,
+      "id": 8,
       "title": "The 5 am club",
       "author": "Robin Sharma",
       "date": "11-06-19",
@@ -80,7 +64,7 @@
       "genre": "Self-help"
    },
    {
-      "id": 11,
+      "id": 9,
       "title": "The 5  Love Languages",
       "author": "Gary Chapman",
       "date": "04-04-18",
@@ -88,11 +72,27 @@
       "genre": "Self-help"
    },
    {
-      "id": 12,
+      "id": 10,
       "title": "Attitude is everything",
       "author": "Jeff Keller",
       "date": "17-01-17",
-      "publisher": " Incorporated",
+      "publisher": "Incorporated",
       "genre": "Self-help"
-   }
+   },
+   {
+      "id": 11,
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "date": "24-04-19",
+      "publisher": "Farrar, Straus and Giroux",
+      "genre": "Philosophy"
+   },
+   {
+      "id": 12,
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Stephen R. Covey",
+      "date": "11-06-19",
+      "publisher": "Free Press",
+      "genre": "Self-help"
+   },
 ]
